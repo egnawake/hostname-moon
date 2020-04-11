@@ -1,0 +1,12 @@
+configuration {
+  theme: "moon";
+  terminal: "alacritty";
+  modi: "window,drun";
+  show-match: false;
+  disable-history: true;
+  sort: true;
+  sorting-method: "fzf";
+  display-window: "wnd";
+  display-drun: "app";
+}
+

@@ -1,0 +1,5 @@
+~/.fehbg &
+picom -b
+dunst &
+alacritty --class Alacritty-startup &
+firefox &

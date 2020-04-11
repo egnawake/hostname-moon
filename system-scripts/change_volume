@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+notification_id=824
+opt=$1
+step=10
+case $opt in
+    inc)
+        pactl set-sink-volume 0 +${step}%;;
+    dec)
+        pactl set-sink-volume 0 -${step}%;;
+    mute)
+	pactl set-sink-mute 0 toggle;;
+    *)
+        echo "Invalid argument";;
+esac
+
+current_volume=$(pactl list sinks | awk '/Volume: front/ { print $5 }')
+muted=$(pactl list sinks | awk '/Mute/ { print $2 }')
+
+~/.local/bin/moon_notify -r ${notification_id} "Volume" "${current_volume}\nMuted ~ ${muted}"
+

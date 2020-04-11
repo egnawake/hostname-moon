@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+notification_id=202
+opt=$1
+step=10
+case $opt in
+    inc)
+        light -A ${step};;
+    dec)
+        light -U ${step};;
+    *)
+        echo "Invalid argument";;
+esac
+
+current_brightness=$(light)
+~/.local/bin/moon_notify -r ${notification_id} "Brightness" "${current_brightness%.*}"
+

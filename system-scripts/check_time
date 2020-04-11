@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+notification_id=557
+time=$(date "+%H:%M%n%A, %B %d")
+
+~/.local/bin/moon_notify -r ${notification_id} "Time" "${time}"
+

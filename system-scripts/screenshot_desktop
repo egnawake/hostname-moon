@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+maim ~/Pictures/screenshots/$(date +%s).png
+dunstify "Screenshot" "Desktop screenshot taken!"
+

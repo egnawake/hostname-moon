@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+category='x-moon-system'
+
+dunstify -h "string:category:${category}" "$@"
+

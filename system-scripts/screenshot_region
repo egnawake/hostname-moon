@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+maim -u -s ~/Pictures/screenshots/$(date +%s).png
+dunstify "Screenshot" "Region screenshot taken!"
+

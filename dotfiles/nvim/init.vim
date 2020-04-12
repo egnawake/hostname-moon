@@ -1,8 +1,9 @@
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'noahfrederick/vim-noctu'
 Plug 'tpope/vim-surround'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-set number
-colo noctu
+set relativenumber
+set termguicolors
+colorscheme dracula
 

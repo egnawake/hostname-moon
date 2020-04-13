@@ -1,11 +1,11 @@
 * {
-    font: "Fantasque Sans Mono 12";
-    foreground: #cdbbde;
-    background: #14101b;
-    background-color: @background;
-    text-color: @foreground;
-    border: 0;
-    scrollbar: false;
+  font: "Fantasque Sans Mono 12";
+  foreground: #f8f8f2;
+  background: #282a36;
+  background-color: @background;
+  text-color: @foreground;
+  border: 0;
+  scrollbar: false;
 }
 
 window {
@@ -14,39 +14,34 @@ window {
 }
 
 element {
-  padding: 2px 0;
+  padding: 5px 4px;
 }
 
 element normal.normal {
-  text-color: #707880;
+  text-color: @foreground;
 }
 element normal.urgent {
-  text-color: #8a4eba;
+  text-color: #f1fa8c;
 }
 element normal.active {
-  text-color: #a2599b;
+  text-color: #50fa7b;
+}
+element selected {
+  background-color: #424558;
 }
 element selected.normal {
   text-color: @foreground;
 }
 element selected.urgent {
-  text-color: #ac84c6;
+  text-color: #f1fa8c;
 }
 element selected.active {
-  text-color: #b584cb;
-}
-element alternate.normal {
-  text-color: #707880;
-}
-element alternate.urgent {
-  text-color: #8a4eba;
-}
-element alternate.active {
-  text-color: #a2599b;
+  text-color: #50fa7b;
 }
 
 inputbar {
-  text-color: #373b41;
+  text-color: @foreground;
+  padding: 5px 4px;
   children: [ prompt,textbox-prompt-colon,entry,overlay,case-indicator ];
 }
 
@@ -55,14 +50,14 @@ entry {
 }
 
 prompt {
-  text-color: inherit;
+  text-color: #ff92d0;
 }
 
 textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
-    expand:     false;
-    str:        ":";
-    text-color: inherit;
+  expand:     false;
+  margin: 0 2px;
+  str:        "~";
+  text-color: #ff92d0;
 }
 
 error-message {

@@ -8,5 +8,6 @@ configuration {
   sorting-method: "fzf";
   display-window: "wnd";
   display-drun: "app";
+  window-format: "{t}";
 }
 
